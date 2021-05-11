@@ -778,9 +778,8 @@ table {
   font-family: 'Newsreader', serif;
   width: 100%;
   padding: 15px;
-  margin-top: 5%;
-  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.75);
   max-height: 500px;
   overflow-y: auto;
 }
@@ -898,12 +897,20 @@ button:hover {
   background-color: #1d2330;
 }
 
+#options {
+  background-color: #352335;
+}
+
+.container {
+  margin-top: 5%;
+}
+
 .white {
   background-color: white;
 }
 
 .text-blacker {
-  color: black;
+  color: black !important;
 }
 
 .hover {
@@ -938,5 +945,40 @@ button:hover {
 .form-div label,
 .form-div-register label {
   color: wheat;
+}
+
+nav {
+  background-color: transparent;
+}
+
+nav a {
+  color: #eae2cf !important;
+}
+
+nav ul li {
+  margin-right: 5px;
+}
+
+nav ul li a {
+  color: #eae2cf !important;
+}
+
+nav .collapse {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav img {
+  width: 50%;
+  border-radius: 50%;
+}
+
+nav b {
+  margin-right: 6px;
+}
+
+nav span {
+  margin-right: 5px;
 }
 /*# sourceMappingURL=style.css.map */

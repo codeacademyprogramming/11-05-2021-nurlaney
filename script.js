@@ -47,12 +47,25 @@ async function main() {
 
     if (document.cookie.indexOf('token=') == -1 && !sessionStorage.getItem('user_register_data')) {
         document.getElementById('bigTable').setAttribute('class', 'd-none');
+        document.getElementById('options').setAttribute('class', 'd-none');
         document.getElementById('form-div-register').classList.remove('d-none');
     } else if (sessionStorage.getItem('user_register_data') && document.cookie.indexOf('token=') == -1) {
         document.getElementById('bigTable').setAttribute('class', 'd-none');
+        document.getElementById('options').setAttribute('class', 'd-none');
         document.getElementById('form-div').classList.remove('d-none');
+    } else {
+        const user = await getData('https://randomuser.me/api/');
+        sessionStorage.setItem('employee-data', JSON.stringify(user.results[0]));
+        var name = document.getElementById('employeeName');
+        var email = document.getElementById('employeeEmail');
+        var location = document.getElementById('Location');
+        var photo = document.getElementById('employeeImg');
+        name.innerHTML = `<b>Fullname:</b> <span>${user.results[0].name.first}</span> <span>${user.results[0].name.last}</span>`;
+        location.innerHTML = `<b>Country:</b> <span>${user.results[0].location.country}</span> <b>City:</b> <span>${user.results[0].location.city}</span>`;
+        email.innerHTML = `<b>Email:</b> <span>${user.results[0].email}</span>`;
+        photo.src = `${user.results[0].picture.medium}`
+        console.log(user.results[0])
     }
-
     closeModal();
     changeLang();
     changeTheme();
@@ -164,6 +177,9 @@ function changeTheme() {
         document.querySelectorAll('td').forEach(el => {
             el.classList.toggle('tdd')
         })
+        document.querySelectorAll('a').forEach(el => {
+            el.classList.toggle('text-blacker')
+        })
         localStorage.setItem('theme', document.body.classList.contains('white') ? 'light' : 'dark');
         document.body.classList.contains('white') ? colorChanger.innerHTML = 'Dark mode' : colorChanger.innerHTML = 'Light mode';
     });
@@ -208,6 +224,7 @@ function login() {
         } else if (username.value == dummy_user_data.username && password.value == dummy_user_data.password) {
             let expireDate = new Date(new Date().getTime() * 1000 * 60 * 60 * 10);
             document.cookie = "token=supersecuretoken; expires=" + expireDate.toUTCString() + ";";
+            const user = getData('https://randomuser.me/api/');
         } else {
             error_message.innerHTML = 'Username or password is wrong'
         }

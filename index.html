@@ -21,6 +21,28 @@
         <div id="modal-content" class="modal-content">
         </div>
     </div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Credit Score app</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a id="employeeName" class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a id="employeeEmail" class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a id="Location" class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+                <li class="nav-item active">
+                    <img id="employeeImg" src="#" alt="">
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div id="container" class="container">
         <div id="form-div" class="form-div d-none">
             <form>
@@ -59,14 +81,16 @@
                 <button id="submit" type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
-        <button id="nameSort">name sort</button>
-        <button id="activeSort">active loan sort</button>
-        <button id="colorChanger">Light Mode</button>
-        <select name="lang" id="languageSelect">
+        <div id="options">
+            <button id="nameSort">name sort</button>
+            <button id="activeSort">active loan sort</button>
+            <button id="colorChanger">Light Mode</button>
+            <select name="lang" id="languageSelect">
             <option value="AZ">AZ</option>
             <option value="EN">EN</option>
         </select>
-        <button id="logOut">Logout</button>
+            <button id="logOut">Logout</button>
+        </div>
         <table id="bigTable">
             <thead>
                 <tr>
