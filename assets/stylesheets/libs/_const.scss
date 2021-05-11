@@ -36,3 +36,7 @@ select {
     color: white;
     border: none;
 }
+
+.text-error {
+    color: $error-color;
+}

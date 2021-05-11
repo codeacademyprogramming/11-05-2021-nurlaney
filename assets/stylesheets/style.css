@@ -770,6 +770,10 @@ select {
   border: none;
 }
 
+.text-error {
+  color: #b31919;
+}
+
 table {
   font-family: 'Newsreader', serif;
   width: 100%;
@@ -924,13 +928,15 @@ button:hover {
   background-color: wheat;
 }
 
-.form-div {
+.form-div,
+.form-div-register {
   width: 50%;
   margin: 0 auto;
   margin-top: 10%;
 }
 
-.form-div label {
+.form-div label,
+.form-div-register label {
   color: wheat;
 }
 /*# sourceMappingURL=style.css.map */
