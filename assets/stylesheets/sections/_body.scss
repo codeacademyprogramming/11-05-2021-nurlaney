@@ -1,0 +1,11 @@
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: $text-color;
+    background-color: $main-color;
+    transition: all 0.4s;
+    &:hover {
+        background-color: #1d2330;
+    }
+}
