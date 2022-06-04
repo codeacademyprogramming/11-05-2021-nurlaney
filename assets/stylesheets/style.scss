@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader&display=swap');
+//grid, container
+@import './grid/grid';
+//libs
+@import './libs/variables';
+@import './libs/const';
+@import './libs/mixins';
+//sections
+@import './sections/table';
+@import './sections/modal';
+@import './sections/body';
+@import './sections/lightMode';
+@import './sections/login';
+@import './sections/nav';

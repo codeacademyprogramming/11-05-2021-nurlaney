@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #1f2739;
+}
+
+th,
+td {
+    color: #eae2cf;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    cursor: pointer;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+select {
+    padding: 5px 10px;
+    background: #352335;
+    color: white;
+    border: none;
+}
+
+.text-error {
+    color: $error-color;
+}

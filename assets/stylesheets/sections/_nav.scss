@@ -1,0 +1,27 @@
+nav {
+    background-color: transparent;
+    a {
+        color: $text-color!important;
+    }
+    ul {
+        li {
+            a {
+                color: $text-color!important;
+            }
+            margin-right: 5px;
+        }
+    }
+    .collapse {
+        justify-content: flex-end;
+    }
+    img {
+        width: 50%;
+        border-radius: 50%;
+    }
+    b {
+        margin-right: 6px;
+    }
+    span {
+        margin-right: 5px;
+    }
+}
